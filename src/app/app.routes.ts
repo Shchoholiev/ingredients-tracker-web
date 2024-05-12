@@ -11,6 +11,7 @@ import { EditUserComponent } from './users/edit-user/edit-user.component';
 import { DeviceCreationComponent } from './devices/device-creation/device-creation.component';
 import { ProductsComponent } from './products/products/products.component';
 import { RecipesComponent } from './recipes/recipes/recipes.component';
+import { AddRecipeComponent } from './recipes/recipe-creation/add-recipe.component';
 
 const routes: Routes = [
     { path: '', redirectTo: '/recipes', pathMatch: 'full' },
@@ -24,6 +25,7 @@ const routes: Routes = [
     { path: 'admin/users', component: UsersManagementComponent, canActivate: [AuthGuard] },
     { path: 'admin/users/:id', component: EditUserComponent, canActivate: [AuthGuard] },
     { path: 'products', component: ProductsComponent, canActivate: [AuthGuard] },
+    { path: 'addrecipe', component: AddRecipeComponent, canActivate: [AuthGuard] }
 ];
 
 @NgModule({

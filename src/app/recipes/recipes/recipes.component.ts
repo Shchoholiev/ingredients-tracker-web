@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { RecipesService } from '../recipes.service';
 import { Recipe } from '../recipe.model';
 import { ActivatedRoute } from '@angular/router';
+import { ImageUploadState } from '../image.model';
 
 @Component({
   selector: 'app-recipes',
@@ -42,5 +43,9 @@ export class RecipesComponent implements OnInit {
           this.isLoading = false;
         }
       );
+  }
+
+  displayThumbnail(recipe: Recipe): boolean {
+    return recipe.thumbnail != null && recipe.thumbnail.imageUploadState == ImageUploadState.Uploaded;
   }
 }

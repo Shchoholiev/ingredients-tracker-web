@@ -96,5 +96,12 @@
     "SEARCH_PRODUCT": "Search product",
     "RECIPES": "Recipes",
     "NO_RECIPES_FOUND": "No recipes found.",
-    "ADD_RECIPE": "Add Recipe"
+    "ADD_RECIPE": "Add Recipe",
+    "CREATE_RECIPE_TITLE": "Create Recipe",
+    "CREATE_RECIPE_INFO": "Fill in the details to create a new recipe.",
+    "CREATE_RECIPE_BUTTON": "Create Recipe",
+    "SEARCH_INGREDIENTS": "Search ingredients",
+    "NEW_CATEGORY_PLACEHOLDER": "New category",
+    "ADD_CATEGORY": "Add Category",
+    "SEARCH_CATEGORIES": "Search categories"
 }

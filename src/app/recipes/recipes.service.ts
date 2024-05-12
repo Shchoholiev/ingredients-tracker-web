@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ApiService } from '../network/api.service';
 import { Recipe } from './recipe.model';
+import { RecipeCreateDto } from './recipe-creation/recipe-create-dto.model';
 
 @Injectable({
   providedIn: 'root'
@@ -11,9 +12,31 @@ export class RecipesService {
     private apiService: ApiService
   ) { }
 
-  createRecipe(recipe: Recipe) {
+  addRecipe(recipeData: RecipeCreateDto) {
+    const formData = new FormData();
+    formData.append('name', recipeData.name);
+    formData.append('text', recipeData.text);
+    formData.append('groupId', recipeData.groupId);
+
+    if (recipeData.thumbnail) {
+      formData.append('thumbnail', recipeData.thumbnail, recipeData.thumbnail.name);
+    }
+
+    if (recipeData.ingredients) {
+      recipeData.ingredients.forEach((ingredient, index) => {
+        formData.append(`ingredients[${index}].id`, ingredient.id);
+        formData.append(`ingredients[${index}].name`, ingredient.name);
+        formData.append(`ingredients[${index}].count`, ingredient.count.toString());
+      });
+    }
+
+    recipeData.categories.forEach((category, index) => {
+      formData.append(`categories[${index}].id`, category.id);
+      formData.append(`categories[${index}].name`, category.name);
+    });
+
     return this.apiService
-      .post<Recipe>('/recipes', recipe);
+      .post<Recipe>('/recipes', formData);
   }
 
   updateRecipe(recipeId: string, recipe: Recipe) {

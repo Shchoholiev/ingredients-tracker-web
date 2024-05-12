@@ -24,6 +24,9 @@ import { DeviceCreationComponent } from './devices/device-creation/device-creati
 import { ProductsComponent } from './products/products/products.component';
 import { RecipesComponent } from './recipes/recipes/recipes.component';
 import { ImageUrlPipe } from './pipes/image-url.pipe';
+import { AddRecipeComponent } from './recipes/recipe-creation/add-recipe.component';
+import { IngredientSelectorComponent } from './recipes/recipe-creation/ingredient-selector/ingredient-selector.component';
+import { CategorySelectorComponent } from './recipes/recipe-creation/categories-selector/categories-selector.component';
 
 export function tokenGetter() {
   return localStorage.getItem('accessToken');
@@ -49,7 +52,10 @@ export function HttpLoaderFactory(http: HttpClient) {
     DeviceCreationComponent,
     ProductsComponent,
     RecipesComponent,
-    ImageUrlPipe
+    ImageUrlPipe,
+    AddRecipeComponent,
+    IngredientSelectorComponent,
+    CategorySelectorComponent
   ],
   imports: [
     BrowserModule,
