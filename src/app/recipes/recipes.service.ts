@@ -12,7 +12,41 @@ export class RecipesService {
     private apiService: ApiService
   ) { }
 
-  addRecipe(recipeData: RecipeCreateDto) {
+  addRecipe(recipe: RecipeCreateDto) {
+    const formData = this.getFormData(recipe);
+
+    return this.apiService
+      .post<Recipe>('/recipes', formData);
+  }
+
+  updateRecipe(recipeId: string, recipe: RecipeCreateDto) {
+    const formData = this.getFormData(recipe);
+
+    return this.apiService
+      .put<Recipe>(`/recipes/${recipeId}`, formData);
+  }
+
+  deleteRecipe(recipeId: string) {
+    return this.apiService
+      .delete(`/recipes/${recipeId}`);
+  }
+
+  getRecipe(recipeId: string) {
+    return this.apiService
+      .get<Recipe>(`/recipes/${recipeId}`);
+  }
+
+  getRecipesPage(page: number, size: number, groupId: string, search: string) {
+    return this.apiService
+      .get<any>(`/recipes?page=${page}&size=${size}&groupId=${groupId}&search=${search}`);
+  }
+
+  cookRecipe(recipeId: string) {
+    return this.apiService
+      .patch(`/recipes/${recipeId}/cook`, {});
+  }
+
+  private getFormData(recipeData: RecipeCreateDto) {
     const formData = new FormData();
     formData.append('name', recipeData.name);
     formData.append('text', recipeData.text);
@@ -35,32 +69,6 @@ export class RecipesService {
       formData.append(`categories[${index}].name`, category.name);
     });
 
-    return this.apiService
-      .post<Recipe>('/recipes', formData);
-  }
-
-  updateRecipe(recipeId: string, recipe: Recipe) {
-    return this.apiService
-      .put<Recipe>(`/recipes/${recipeId}`, recipe);
-  }
-
-  deleteRecipe(recipeId: string) {
-    return this.apiService
-      .delete(`/recipes/${recipeId}`);
-  }
-
-  getRecipe(recipeId: string) {
-    return this.apiService
-      .get<Recipe>(`/recipes/${recipeId}`);
-  }
-
-  getRecipesPage(page: number, size: number, groupId: string, search: string) {
-    return this.apiService
-      .get<any>(`/recipes?page=${page}&size=${size}&groupId=${groupId}&search=${search}`);
-  }
-
-  cookRecipe(recipeId: string) {
-    return this.apiService
-      .patch(`/recipes/${recipeId}/cook`, {});
+    return formData;
   }
 }

@@ -20,6 +20,7 @@ const routes: Routes = [
     { path: 'login', component: LoginComponent },
     { path: 'recipes', component: RecipesComponent, canActivate: [AuthGuard] },
     { path: 'recipes/:id', component: RecipeDetailsComponent, canActivate: [AuthGuard] },
+    { path: 'recipes/:id/edit', component: AddRecipeComponent, canActivate: [AuthGuard] },
     { path: 'creategroup', component: GroupCreationComponent, canActivate: [AuthGuard] },
     { path: 'group', component: GroupComponent, canActivate: [AuthGuard] },
     { path: 'devices', component: DevicesComponent, canActivate: [AuthGuard] },

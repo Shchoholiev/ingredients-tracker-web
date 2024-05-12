@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 import { Category } from '../../category.model';
 import { CategoriesService } from './categories.service';
 
@@ -9,7 +9,7 @@ import { CategoriesService } from './categories.service';
 })
 export class CategorySelectorComponent implements OnInit {
   categories: Category[] = [];
-  selectedCategories: Category[] = [];
+  @Input() selectedCategories: Category[] = [];
   newCategoryName: string = '';
   currentPage = 1;
   pageSize = 6;

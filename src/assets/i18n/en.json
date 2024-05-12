@@ -106,5 +106,9 @@
     "SEARCH_CATEGORIES": "Search categories",
     "INGREDIENTS": "Ingredients",
     "CATEGORIES": "Categories",
-    "COOK_RECIPE": "Cook Recipe"
+    "COOK_RECIPE": "Cook Recipe",
+    "THUMBNAIL": "Thumbnail",
+    "UPDATE_RECIPE_BUTTON": "Update Recipe",
+    "UPDATE_RECIPE_TITLE": "Update Recipe",
+    "UPDATE_RECIPE_INFO": "Update the details of the recipe."
 }

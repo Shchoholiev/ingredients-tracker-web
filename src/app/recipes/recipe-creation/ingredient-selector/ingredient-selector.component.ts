@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ProductsService } from '../../../products/products.service';
 import { Product } from '../../../products/product.model';
 
@@ -9,7 +9,7 @@ import { Product } from '../../../products/product.model';
 })
 export class IngredientSelectorComponent implements OnInit {
   ingredients: Product[] = [];
-  selectedIngredients: Product[] = [];
+  @Input() selectedIngredients: Product[] = [];
   currentPage = 1;
   pageSize = 6;
   totalPages = 1;
@@ -30,9 +30,6 @@ export class IngredientSelectorComponent implements OnInit {
       .subscribe(
         response => {
           this.ingredients = response.items;
-          this.ingredients.forEach(ingredient => {
-            ingredient.count = 0;
-          });
           this.totalPages = response.totalPages;
           this.isLoading = false;
         }
@@ -43,6 +40,7 @@ export class IngredientSelectorComponent implements OnInit {
     if (this.isSelected(ingredient)) {
       this.selectedIngredients = this.selectedIngredients.filter(p => p.id !== ingredient.id);
     } else {
+      ingredient.count = 1;
       this.selectedIngredients.push(ingredient);
     }
     this.onSelect.emit(this.selectedIngredients);
