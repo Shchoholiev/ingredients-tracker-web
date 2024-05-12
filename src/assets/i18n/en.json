@@ -82,7 +82,7 @@
     "CREATE_DEVICE_INFO": "Fill in the details to create a new device.",
     "TYPE": "Type",
     "CREATE_DEVICE_BUTTON": "Create Device",
-    "DEVICE_CREATED": "Device Created Successfully. Copy device GUID and Access Key for device setup.",
+    "DEVICE_CREATED": "Device Created Successfully. Copy device GUID for device setup.",
     "Unknown": "Unknown",
     "Rack4ShelfController": "Rack 4 Shelf Controller",
     "AccessPoint": "Access Point",

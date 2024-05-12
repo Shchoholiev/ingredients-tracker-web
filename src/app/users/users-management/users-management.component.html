@@ -21,7 +21,7 @@
                     <td>{{ user.phone }}</td>
                     <td>{{ formatRoles(user.roles) }}</td>
                     <td>
-                        <a routerLink="/admin/users/{{ user.id }}?username={{ user.email ?? user.phone }}" class="btn btn-primary">{{ 'DETAILS' | translate }}</a>
+                        <a href="/admin/users/{{ user.id }}?username={{ user.email ?? user.phone }}" class="btn btn-primary">{{ 'DETAILS' | translate }}</a>
                     </td>
                 </tr>
             </tbody>

@@ -62,7 +62,7 @@ export class HeaderComponent implements OnInit {
   }
 
   /**
-   * Performs a search for items based on the search query.
+   * Performs a search for recipes based on the search query.
    * It navigates to the search page with the search query as a query parameter.
    */
   searchRecipes(): void {
