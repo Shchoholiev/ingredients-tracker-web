@@ -10,7 +10,8 @@
         "SEARCH_PLACEHOLDER": "Search recipes",
         "WELCOME": "Welcome,",
         "LOGOUT": "Logout",
-        "CREATE_DEVICE": "Create Device"
+        "CREATE_DEVICE": "Create Device",
+        "PRODUCTS": "Products"
     },
     "LOADING": "Loading...",
     "YOUR_GROUP": "Your Group",
@@ -86,5 +87,11 @@
     "Rack4ShelfController": "Rack 4 Shelf Controller",
     "AccessPoint": "Access Point",
     "GUID": "GUID",
-    "ACCESS_KEY": "Access Key"
+    "ACCESS_KEY": "Access Key",
+    "YOUR_PRODUCTS": "Your Products",
+    "ADD_PRODUCT": "Add Product",
+    "NO_PRODUCTS_FOUND": "No products found.",
+    "ENTER_PRODUCT_NAME": "Enter product name",
+    "ENTER_PRODUCT_COUNT": "Enter product count",
+    "SEARCH_PRODUCT": "Search product"
 }

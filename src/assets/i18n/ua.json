@@ -10,7 +10,8 @@
         "SEARCH_PLACEHOLDER": "Пошук рецептів",
         "WELCOME": "Ласкаво просимо,",
         "LOGOUT": "Вийти",
-        "CREATE_DEVICE": "Створити пристрій"
+        "CREATE_DEVICE": "Створити пристрій",
+        "PRODUCTS": "Продукти"
     },
     "LOADING": "Завантаження...",
     "YOUR_GROUP": "Ваша Група",
@@ -86,5 +87,8 @@
     "Rack4ShelfController": "Контролер стелажу на 4 полиці",
     "AccessPoint": "Точка доступу",
     "GUID": "GUID",
-    "ACCESS_KEY": "Ключ доступу"
+    "ACCESS_KEY": "Ключ доступу",
+    "YOUR_PRODUCTS": "Ваші Продукти",
+    "ADD_PRODUCT": "Додати Продукт",
+    "NO_PRODUCTS_FOUND": "Продуктів не знайдено."
 }
