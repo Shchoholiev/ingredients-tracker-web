@@ -66,6 +66,6 @@ export class HeaderComponent implements OnInit {
    * It navigates to the search page with the search query as a query parameter.
    */
   searchRecipes(): void {
-    this.router.navigate(['/search'], { queryParams: { search: this.searchQuery } });
+    this.router.navigate(['/recipes'], { queryParams: { search: this.searchQuery } });
   }
 }

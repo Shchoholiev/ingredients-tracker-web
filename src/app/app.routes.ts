@@ -10,11 +10,13 @@ import { UsersManagementComponent } from './users/users-management/users-managem
 import { EditUserComponent } from './users/edit-user/edit-user.component';
 import { DeviceCreationComponent } from './devices/device-creation/device-creation.component';
 import { ProductsComponent } from './products/products/products.component';
+import { RecipesComponent } from './recipes/recipes/recipes.component';
 
 const routes: Routes = [
     { path: '', redirectTo: '/recipes', pathMatch: 'full' },
     { path: 'register', component: RegisterComponent },
     { path: 'login', component: LoginComponent },
+    { path: 'recipes', component: RecipesComponent, canActivate: [AuthGuard] },
     { path: 'creategroup', component: GroupCreationComponent, canActivate: [AuthGuard] },
     { path: 'group', component: GroupComponent, canActivate: [AuthGuard] },
     { path: 'devices', component: DevicesComponent, canActivate: [AuthGuard] },

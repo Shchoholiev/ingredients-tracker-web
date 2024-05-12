@@ -22,6 +22,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { DeviceCreationComponent } from './devices/device-creation/device-creation.component';
 import { ProductsComponent } from './products/products/products.component';
+import { RecipesComponent } from './recipes/recipes/recipes.component';
+import { ImageUrlPipe } from './pipes/image-url.pipe';
 
 export function tokenGetter() {
   return localStorage.getItem('accessToken');
@@ -45,7 +47,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     UsersManagementComponent,
     EditUserComponent,
     DeviceCreationComponent,
-    ProductsComponent
+    ProductsComponent,
+    RecipesComponent,
+    ImageUrlPipe
   ],
   imports: [
     BrowserModule,

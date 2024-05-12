@@ -93,5 +93,8 @@
     "NO_PRODUCTS_FOUND": "No products found.",
     "ENTER_PRODUCT_NAME": "Enter product name",
     "ENTER_PRODUCT_COUNT": "Enter product count",
-    "SEARCH_PRODUCT": "Search product"
+    "SEARCH_PRODUCT": "Search product",
+    "RECIPES": "Recipes",
+    "NO_RECIPES_FOUND": "No recipes found.",
+    "ADD_RECIPE": "Add Recipe"
 }
