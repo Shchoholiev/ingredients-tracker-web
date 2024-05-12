@@ -27,6 +27,7 @@ import { ImageUrlPipe } from './pipes/image-url.pipe';
 import { AddRecipeComponent } from './recipes/recipe-creation/add-recipe.component';
 import { IngredientSelectorComponent } from './recipes/recipe-creation/ingredient-selector/ingredient-selector.component';
 import { CategorySelectorComponent } from './recipes/recipe-creation/categories-selector/categories-selector.component';
+import { RecipeDetailsComponent } from './recipes/recipe-details/recipe-details.component';
 
 export function tokenGetter() {
   return localStorage.getItem('accessToken');
@@ -55,7 +56,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     ImageUrlPipe,
     AddRecipeComponent,
     IngredientSelectorComponent,
-    CategorySelectorComponent
+    CategorySelectorComponent,
+    RecipeDetailsComponent
   ],
   imports: [
     BrowserModule,

@@ -103,5 +103,8 @@
     "SEARCH_INGREDIENTS": "Search ingredients",
     "NEW_CATEGORY_PLACEHOLDER": "New category",
     "ADD_CATEGORY": "Add Category",
-    "SEARCH_CATEGORIES": "Search categories"
+    "SEARCH_CATEGORIES": "Search categories",
+    "INGREDIENTS": "Ingredients",
+    "CATEGORIES": "Categories",
+    "COOK_RECIPE": "Cook Recipe"
 }

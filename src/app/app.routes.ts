@@ -12,12 +12,14 @@ import { DeviceCreationComponent } from './devices/device-creation/device-creati
 import { ProductsComponent } from './products/products/products.component';
 import { RecipesComponent } from './recipes/recipes/recipes.component';
 import { AddRecipeComponent } from './recipes/recipe-creation/add-recipe.component';
+import { RecipeDetailsComponent } from './recipes/recipe-details/recipe-details.component';
 
 const routes: Routes = [
     { path: '', redirectTo: '/recipes', pathMatch: 'full' },
     { path: 'register', component: RegisterComponent },
     { path: 'login', component: LoginComponent },
     { path: 'recipes', component: RecipesComponent, canActivate: [AuthGuard] },
+    { path: 'recipes/:id', component: RecipeDetailsComponent, canActivate: [AuthGuard] },
     { path: 'creategroup', component: GroupCreationComponent, canActivate: [AuthGuard] },
     { path: 'group', component: GroupComponent, canActivate: [AuthGuard] },
     { path: 'devices', component: DevicesComponent, canActivate: [AuthGuard] },
