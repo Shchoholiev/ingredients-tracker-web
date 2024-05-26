@@ -18,6 +18,9 @@ export class RecipeDetailsComponent implements OnInit {
     private router: Router
   ) { }
 
+  /**
+   * Lifecycle hook that is called after the component has been initialized.
+   */
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       const id = params['id'];
@@ -27,6 +30,10 @@ export class RecipeDetailsComponent implements OnInit {
     });
   }
 
+  /**
+   * Loads the recipe with the specified ID.
+   * @param id The ID of the recipe to load.
+   */
   loadRecipe(id: string): void {
     this.recipeService.getRecipe(id).subscribe({
       next: (recipe) => {
@@ -40,6 +47,9 @@ export class RecipeDetailsComponent implements OnInit {
     });
   }
 
+  /**
+   * Deletes the current recipe.
+   */
   deleteRecipe(): void {
     this.recipeService.deleteRecipe(this.recipe.id)
       .subscribe({
@@ -52,6 +62,9 @@ export class RecipeDetailsComponent implements OnInit {
       });
   }
 
+  /**
+   * Cooks the current recipe.
+   */
   cookRecipe(): void {
     this.recipeService.cookRecipe(this.recipe.id)
       .subscribe({
