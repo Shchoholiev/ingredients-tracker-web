@@ -1,27 +1,77 @@
-# SmartInventorySystemWeb
+# ingredients-tracker-web
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.3.
+A web application for tracking ingredients, managing recipes, groups, devices, and users with multilingual support built using Angular.
 
-## Development server
+## Table of Contents
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- [Features](#features)
+- [Stack](#stack)
+- [Installation](#installation)
+  - [Prerequisites](#prerequisites)
+  - [Setup Instructions](#setup-instructions)
+- [Configuration](#configuration)
 
-## Code scaffolding
+## Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- User registration and login with JWT authentication
+- Group creation, management, and user administration
+- Device creation, activation, and listing
+- Product management with searchable lists and editable counts
+- Recipe creation, editing, detailed viewing, and cooking functionality
+- Ingredient and category selectors with pagination and search
+- Multilingual support (English and Ukrainian)
+- Responsive layout with header, footer, and navigation
 
-## Build
+## Stack
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Angular 17
+- TypeScript
+- Bootstrap 5
 
-## Running unit tests
+## Installation
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Prerequisites
 
-## Running end-to-end tests
+- Node.js (Recommended LTS version)
+- npm (comes with Node.js)
+- Angular CLI (`npm install -g @angular/cli`)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Setup Instructions
 
-## Further help
+```bash
+# Clone the repository
+git clone https://github.com/Shchoholiev/ingredients-tracker-web.git
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Navigate to the project directory
+cd ingredients-tracker-web
+
+# Install dependencies
+npm install
+
+# Run development server
+npm start
+```
+
+The application will be served at `http://localhost:4200/`. It supports hot reload on source code changes.
+
+## Configuration
+
+### Environment Variables
+
+The API base URLs and image storage URL are configured in the Angular environment files located in `src/environments/environment.ts`.
+
+Update the following properties as needed:
+
+```ts
+export const environment = {
+  production: false,
+  apiUrl: 'https://your-api-url.com',            // Base URL for backend API requests
+  imageStorageUrl: 'https://your-image-storage/' // Base URL for loading images
+};
+```
+
+### Localization
+
+By default, the app uses the language saved in `localStorage` under the key `language` or defaults to English (`en`). Supported languages include English (`en`) and Ukrainian (`ua`).
+
+Language can be switched via buttons in the app footer, which update `localStorage` and reload translations dynamically.
